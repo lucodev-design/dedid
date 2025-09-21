@@ -1,0 +1,101 @@
+    /* Fondo estilo espacio */
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Estrellas animadas */
+    .stars {
+      width: 2px;
+      height: 2px;
+      background: white;
+      position: absolute;
+      animation: moveStars 10s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(100vh); }
+    }
+
+    /* Card central */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+      animation: fadeIn 2s ease-in-out;
+      max-width: 90%;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Texto especial */
+    .card h1 {
+      color: #ff00ff;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff66ff, 0 0 30px #ffccff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff66ff, 0 0 30px #ffccff; }
+      to { text-shadow: 0 0 20px #ff66ff, 0 0 40px #ff00ff, 0 0 60px #ff66ff; }
+    }
+
+    /* Botón */
+    .card a button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      color: white;
+      background: linear-gradient(90deg, #ff00ff, #6600ff);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #ff00ff;
+      transition: 0.3s;
+    }
+
+    .card a button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff66ff, 0 0 40px #6600ff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .card {
+        padding: 25px;
+      }
+      .card h1 {
+        font-size: 2rem;
+      }
+      .card a button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 20px;
+      }
+      .card h1 {
+        font-size: 1.5rem;
+      }
+      .card a button {
+        font-size: 0.85rem;
+        padding: 8px 18px;
+      }
+    }

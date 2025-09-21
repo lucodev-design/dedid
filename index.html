@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Regalo Especial</title>
+</head>
+<body>
+  <!-- Estrellas generadas -->
+  <script>
+    for (let i = 0; i < 150; i++) {
+      let star = document.createElement("div");
+      star.className = "stars";
+      star.style.left = Math.random() * window.innerWidth + "px";
+      star.style.top = Math.random() * window.innerHeight + "px";
+      star.style.animationDuration = 5 + Math.random() * 10 + "s";
+      star.style.opacity = Math.random();
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <!-- Card -->
+  <div class="card">
+    <h1>✨ Te tengo un regalo especial ✨</h1>
+    <a href="tulipanes.html">
+        <button>Ver detalle</button>
+    </a>    
+  </div>
+</body>
+</html>
